@@ -13,14 +13,14 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install'
-        sh 'npm run build'
-     }
+             }
     } 
     stage('test') {
         steps {
             sh 'npm start'
             sh 'node app --location Newcastle'
             sh 'npm test'
+            sh 'npm run cover'
         }
     }
   } 
