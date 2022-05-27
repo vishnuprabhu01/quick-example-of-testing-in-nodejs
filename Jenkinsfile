@@ -17,12 +17,8 @@ pipeline {
     } 
     stage('test') {
         steps {
-            sh 'npm start'
-            sh 'node app --location Newcastle'
-            sh 'npm audit'
-            sh 'npm test'
-            sh 'npm run cover'
-        }
+            sh 'npm run start'
+                    }
     }
   } 
 }
